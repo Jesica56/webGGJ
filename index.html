@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet" />
+    <script src="./script.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigbaDGvF0odJZ4"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar fixed-top navbar-dark custom-navbar">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- Logo -->
+          <a class="navbar-brand" href="#home">
+            <img
+              src="./assets/logo/5141260902434189038.jpg"
+              alt="Salta Game Jam"
+              class="logo-navbar"
+            />
+            <span class="brand-text">Salta Game Jam</span>
+          </a>
+
+          <!-- Links -->
+          <ul class="nav nav-links">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#talleres">Talleres</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#galeria">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#comunidad">Comunidad</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Texto -->
+            <div class="col-lg-6 text-center text-lg-start">
+              <h1 class="hero-title">Salta Game Jam</h1>
+              <h2 class="hero-subtitle">Creando videojuegos en comunidad</h2>
+
+              <p class="hero-text">
+                Somos una comunidad de desarrolladores, artistas y creativos que
+                se reúne para crear videojuegos, aprender juntos y fortalecer la
+                escena game dev en Salta y la región.
+              </p>
+
+              <div class="hero-buttons">
+                <a href="#comunidad" class="btn btn-primary me-2">
+                  Sumate a la comunidad
+                </a>
+                <a href="#talleres" class="btn btn-outline-light">
+                  Ver talleres
+                </a>
+              </div>
+            </div>
+
+            <!-- Imagen evento -->
+            <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+              <div class="event-image-wrapper">
+                <img
+                  src="./assets/eventos/evento2026.jpg"
+                  alt="Evento actual Salta Game Jam"
+                  class="img-fluid event-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="talleres" class="talleres-section">
+        <div class="container">
+          <!-- Título -->
+          <div class="section-header text-center mb-5">
+            <h2 class="section-title">Talleres & Charlas</h2>
+            <p class="section-text">
+              Contenidos compartidos durante ediciones anteriores de Salta Game
+              Jam.
+            </p>
+          </div>
+
+          <!-- Videos -->
+          <div class="row g-4">
+            <!-- Taller 1 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="taller-card">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="https://www.youtube.com/embed/EJkZ7in-RJc"
+                    title="Introducción a Godot 4"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+                <h5 class="taller-title text-center">
+                  Introducción a Godot 4<br />Creación Núcleo Videojuego
+                </h5>
+                <span class="taller-meta text-center d-block">
+                  Salta Game Jam 2026
+                </span>
+              </div>
+            </div>
+
+            <!-- Taller 2 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="taller-card">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="https://www.youtube.com/embed/Gb2A6asSj3c"
+                    title="Ludificación de contenidos académicos"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+                <h5 class="taller-title text-center">
+                  Ludificación de<br />Contenidos Académicos
+                </h5>
+                <span class="taller-meta text-center d-block">
+                  Salta Game Jam
+                </span>
+              </div>
+            </div>
+
+            <!-- Taller 3 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="taller-card">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="https://www.youtube.com/embed/WzD-xTLSwP0"
+                    title="Teaser Trailer"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+                <h5 class="taller-title text-center">Teaser Trailer</h5>
+                <span class="taller-meta text-center d-block">
+                  Global Game Jam 2025
+                </span>
+              </div>
+            </div>
+
+            <!-- Taller 4 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="taller-card">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="https://www.youtube.com/embed/hKjwnmNZfzo"
+                    title="Diseño narrativo de videojuegos"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+                <h5 class="taller-title text-center">
+                  Diseño Narrativo<br />de Videojuegos
+                </h5>
+                <span class="taller-meta text-center d-block">
+                  Salta Game Jam 2025
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" class="galeria-section">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Galería</h2>
+            <p class="section-text">
+              Momentos de ediciones anteriores de Salta Game Jam
+            </p>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+            <!-- Foto 1 -->
+            <div class="col-6 col-md-3">
+              <img
+                src="./assets/experiencia/4933782740449037108.jpg"
+                class="galeria-img"
+                alt="Salta Game Jam"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-img="./assets/experiencia/4933782740449037108.jpg"
+              />
+            </div>
+
+            <!-- Foto 2 -->
+            <div class="col-6 col-md-3">
+              <img
+                src="./assets/experiencia/4933782740449037110.jpg"
+                class="galeria-img"
+                alt="Salta Game Jam"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-img="./assets/experiencia/4933782740449037110.jpg"
+              />
+            </div>
+
+            <!-- Foto 3 -->
+            <div class="col-6 col-md-3">
+              <img
+                src="./assets/experiencia/4933782740449037111.jpg"
+                class="galeria-img"
+                alt="Salta Game Jam"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-img="./assets/experiencia/4933782740449037111.jpg"
+              />
+            </div>
+
+            <!-- Foto 4 -->
+            <div class="col-6 col-md-3">
+              <img
+                src="./assets/experiencia/4933782740449037114.jpg"
+                class="galeria-img"
+                alt="Salta Game Jam"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-img="./assets/experiencia/4933782740449037114.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="modal fade"
+        id="galeriaModal"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark border-0">
+            <div class="modal-body p-0">
+              <img
+                id="galeriaModalImg"
+                class="img-fluid w-100 rounded"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <section
+        id="comunidad"
+        class="comunidad-section d-flex align-items-center"
+      >
+        <div class="container text-center">
+          <h2 class="section-title mb-4">Únete a nuestra comunidad</h2>
+          <p class="section-text mb-4">
+            Forma parte de Salta Game Jam y conecta con otros entusiastas del
+            desarrollo de videojuegos. Comparte tus ideas, colabora en proyectos
+            y participa en eventos emocionantes.
+          </p>
+          <a
+            href="https://www.facebook.com/groups/saltagamejam"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Únete al grupo de Facebook
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
