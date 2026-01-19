@@ -219,45 +219,48 @@ body {
 /* SOBRE NOSOTROS*/
 
 .sobre-section {
-  padding: 100px 0;
-  background-color: #0b0b16;
-  color: #eaeaf0;
+  padding: 80px 0;
+  background-color: #0e0e0e;
+  color: #eaeaea;
 }
 
-.sobre-title {
-  margin-top: 40px;
+.sobre-card {
+  background: #161616;
+  border-radius: 16px;
+  padding: 30px;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.sobre-icon {
+  font-size: 42px;
   margin-bottom: 15px;
-  font-size: 1.5rem;
-  color: #ffffff;
 }
 
-.sobre-text {
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 15px;
-  color: #d1d1e0;
-}
-
-.sobre-text strong {
-  color: #ffffff;
-}
-
-.sobre-list {
-  padding-left: 20px;
-  margin-bottom: 20px;
-}
-
-.sobre-list li {
-  margin-bottom: 8px;
-}
-
-.sobre-list.multi {
-  columns: 2;
-}
-
-.sobre-text.destacado {
+.sobre-grid div {
+  background: #1e1e1e;
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-align: center;
   font-weight: 500;
-  color: #ffffff;
+}
+
+.sobre-cta {
+  background: linear-gradient(135deg, #6f00ff, #a855f7);
+  padding: 50px 30px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.sobre-cta p {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 
