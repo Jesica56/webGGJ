@@ -1,17 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
+    <!-- Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="./style.css" rel="stylesheet" />
-    <script src="./script.js" defer></script>
+
+    <!-- Title -->
+    <title>Salta Game Jam</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+
+    <!-- Scripts -->
+    <script src="./script.js" defer></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigbaDGvF0odJZ4"
@@ -19,6 +28,7 @@
       defer
     ></script>
   </head>
+
   <body>
     <header>
       <nav class="navbar fixed-top navbar-dark custom-navbar">
@@ -26,16 +36,16 @@
           class="container d-flex justify-content-between align-items-center"
         >
           <!-- Logo -->
-          <a class="navbar-brand" href="#home">
+          <a class="navbar-brand d-flex align-items-center" href="#home">
             <img
-              src="./assets/logo/5141260902434189038.jpg"
+              src="./assets/logo/LOGO-GGJ26-HUBVAQUEROS-02-removebg-preview.png"
               alt="Salta Game Jam"
               class="logo-navbar"
             />
-            <span class="brand-text">Salta Game Jam</span>
+            <span class="brand-text ms-2">Salta Game Jam</span>
           </a>
 
-          <!-- Links -->
+          <!-- Navigation -->
           <ul class="nav nav-links">
             <li class="nav-item">
               <a class="nav-link" href="#home">Inicio</a>
@@ -47,17 +57,18 @@
               <a class="nav-link" href="#galeria">Galería</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#comunidad">Comunidad</a>
+              <a class="nav-link" href="#sobre">Comunidad</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+
     <main>
       <section id="home" class="hero-section d-flex align-items-center">
         <div class="container">
           <div class="row align-items-center">
-            <!-- Texto -->
+            <!-- Hero Text -->
             <div class="col-lg-6 text-center text-lg-start">
               <h1 class="hero-title">Salta Game Jam</h1>
               <h2 class="hero-subtitle">Creando videojuegos en comunidad</h2>
@@ -69,7 +80,7 @@
               </p>
 
               <div class="hero-buttons">
-                <a href="#comunidad" class="btn btn-primary me-2">
+                <a href="#sobre" class="btn btn-primary me-2">
                   Sumate a la comunidad
                 </a>
                 <a href="#talleres" class="btn btn-outline-light">
@@ -78,15 +89,12 @@
               </div>
             </div>
 
-            <!-- Imagen evento -->
             <div class="col-lg-6 mt-4 mt-lg-0 text-center">
-              <div class="event-image-wrapper">
-                <img
-                  src="./assets/eventos/evento2026.jpg"
-                  alt="Evento actual Salta Game Jam"
-                  class="img-fluid event-image"
-                />
-              </div>
+              <img
+                src="./assets/eventos/evento2026.jpg"
+                alt="Evento Salta Game Jam 2026"
+                class="img-fluid event-image"
+              />
             </div>
           </div>
         </div>
@@ -94,18 +102,16 @@
 
       <section id="talleres" class="talleres-section">
         <div class="container">
-          <!-- Título -->
           <div class="section-header text-center mb-5">
             <h2 class="section-title">Talleres & Charlas</h2>
             <p class="section-text">
               Contenidos compartidos durante ediciones anteriores de Salta Game
-              Jam.
+              Jam
             </p>
           </div>
 
-          <!-- Videos -->
           <div class="row g-4">
-            <!-- Taller 1 -->
+            <!-- Taller Card -->
             <div class="col-md-6 col-lg-3">
               <div class="taller-card">
                 <div class="ratio ratio-16x9">
@@ -113,8 +119,7 @@
                     src="https://www.youtube.com/embed/EJkZ7in-RJc"
                     title="Introducción a Godot 4"
                     allowfullscreen
-                  >
-                  </iframe>
+                  ></iframe>
                 </div>
                 <h5 class="taller-title text-center">
                   Introducción a Godot 4<br />Creación Núcleo Videojuego
@@ -125,7 +130,6 @@
               </div>
             </div>
 
-            <!-- Taller 2 -->
             <div class="col-md-6 col-lg-3">
               <div class="taller-card">
                 <div class="ratio ratio-16x9">
@@ -133,11 +137,10 @@
                     src="https://www.youtube.com/embed/Gb2A6asSj3c"
                     title="Ludificación de contenidos académicos"
                     allowfullscreen
-                  >
-                  </iframe>
+                  ></iframe>
                 </div>
                 <h5 class="taller-title text-center">
-                  Ludificación de<br />Contenidos Académicos
+                  Ludificación de Contenidos Académicos
                 </h5>
                 <span class="taller-meta text-center d-block">
                   Salta Game Jam
@@ -145,7 +148,6 @@
               </div>
             </div>
 
-            <!-- Taller 3 -->
             <div class="col-md-6 col-lg-3">
               <div class="taller-card">
                 <div class="ratio ratio-16x9">
@@ -153,8 +155,7 @@
                     src="https://www.youtube.com/embed/WzD-xTLSwP0"
                     title="Teaser Trailer"
                     allowfullscreen
-                  >
-                  </iframe>
+                  ></iframe>
                 </div>
                 <h5 class="taller-title text-center">Teaser Trailer</h5>
                 <span class="taller-meta text-center d-block">
@@ -163,7 +164,6 @@
               </div>
             </div>
 
-            <!-- Taller 4 -->
             <div class="col-md-6 col-lg-3">
               <div class="taller-card">
                 <div class="ratio ratio-16x9">
@@ -171,11 +171,10 @@
                     src="https://www.youtube.com/embed/hKjwnmNZfzo"
                     title="Diseño narrativo de videojuegos"
                     allowfullscreen
-                  >
-                  </iframe>
+                  ></iframe>
                 </div>
                 <h5 class="taller-title text-center">
-                  Diseño Narrativo<br />de Videojuegos
+                  Diseño Narrativo de Videojuegos
                 </h5>
                 <span class="taller-meta text-center d-block">
                   Salta Game Jam 2025
@@ -196,7 +195,6 @@
           </div>
 
           <div class="row g-4 justify-content-center">
-            <!-- Foto 1 -->
             <div class="col-6 col-md-3">
               <img
                 src="./assets/experiencia/4933782740449037108.jpg"
@@ -208,7 +206,6 @@
               />
             </div>
 
-            <!-- Foto 2 -->
             <div class="col-6 col-md-3">
               <img
                 src="./assets/experiencia/4933782740449037110.jpg"
@@ -220,7 +217,6 @@
               />
             </div>
 
-            <!-- Foto 3 -->
             <div class="col-6 col-md-3">
               <img
                 src="./assets/experiencia/4933782740449037111.jpg"
@@ -232,7 +228,6 @@
               />
             </div>
 
-            <!-- Foto 4 -->
             <div class="col-6 col-md-3">
               <img
                 src="./assets/experiencia/4933782740449037114.jpg"
@@ -246,6 +241,7 @@
           </div>
         </div>
       </section>
+
       <div
         class="modal fade"
         id="galeriaModal"
@@ -264,27 +260,158 @@
           </div>
         </div>
       </div>
-      <section
-        id="comunidad"
-        class="comunidad-section d-flex align-items-center"
-      >
-        <div class="container text-center">
-          <h2 class="section-title mb-4">Únete a nuestra comunidad</h2>
-          <p class="section-text mb-4">
-            Forma parte de Salta Game Jam y conecta con otros entusiastas del
-            desarrollo de videojuegos. Comparte tus ideas, colabora en proyectos
-            y participa en eventos emocionantes.
-          </p>
-          <a
-            href="https://www.facebook.com/groups/saltagamejam"
-            class="btn btn-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Únete al grupo de Facebook
-          </a>
+
+      <section id="sobre" class="sobre-section">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="section-title">GLOBAL GAME JAM 2026</h2>
+            <p class="section-subtitle">Salta – Hub Vaqueros</p>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <h3 class="sobre-title">¿Qué es la Global Game Jam?</h3>
+              <p class="sobre-text">
+                La <strong>Global Game Jam (GGJ)</strong> es el evento de
+                creación de videojuegos más grande del mundo. Durante un tiempo
+                limitado, personas de distintos perfiles se reúnen para idear,
+                diseñar y desarrollar videojuegos desde cero.
+              </p>
+
+              <p class="sobre-text">
+                La <strong>Global Game Jam Salta – Hub Vaqueros</strong> forma
+                parte de esta experiencia global, conectando a la comunidad
+                local con miles de participantes alrededor del mundo.
+              </p>
+
+              <h3 class="sobre-title">Nuestro objetivo</h3>
+              <p class="sobre-text">
+                El objetivo de la Game Jam es fomentar el desarrollo de
+                videojuegos, fortalecer la comunidad creativa y promover el
+                trabajo colaborativo entre personas con diferentes habilidades.
+              </p>
+
+              <p class="sobre-text">
+                Buscamos generar un espacio de aprendizaje, experimentación y
+                creación, donde las ideas se transformen en experiencias
+                interactivas.
+              </p>
+
+              <h3 class="sobre-title">Inspiración desde Salta</h3>
+              <p class="sobre-text">
+                Salta posee una enorme riqueza cultural, natural e histórica.
+                Durante la Jam exploraremos cómo estos elementos pueden
+                convertirse en fuente de inspiración para crear:
+              </p>
+
+              <ul class="sobre-list">
+                <li>Protagonistas y villanos</li>
+                <li>Criaturas fantásticas</li>
+                <li>Mundos e historias memorables</li>
+              </ul>
+
+              <p class="sobre-text">
+                Tomando como referencia el enfoque creativo de los grandes
+                estudios, estas ideas también pueden expandirse a otros formatos
+                como el cine o la animación.
+              </p>
+
+              <h3 class="sobre-title">¿Quiénes pueden participar?</h3>
+              <p class="sobre-text">
+                La Game Jam está abierta a todas las personas interesadas en
+                crear videojuegos. No es necesario ser programador ni tener
+                experiencia previa.
+              </p>
+
+              <p class="sobre-text">
+                Los videojuegos se construyen en equipo y necesitan perfiles
+                como:
+              </p>
+
+              <ul class="sobre-list multi">
+                <li>Programadores</li>
+                <li>Diseñadores de juegos</li>
+                <li>Artistas visuales</li>
+                <li>Músicos y diseñadores de sonido</li>
+                <li>UX / UI</li>
+                <li>Productores</li>
+                <li>Escritores</li>
+              </ul>
+
+              <p class="sobre-text destacado">
+                Y, sobre todo, personas curiosas, con ganas de aprender, crear y
+                descubrir su lugar dentro de la industria de los videojuegos.
+              </p>
+
+              <div class="text-center mt-5">
+                <h3 class="sobre-title">Sumate a la experiencia</h3>
+                <p class="sobre-text">
+                  Si te interesa participar, compartir ideas y explorar nuevas
+                  posibilidades creativas, la
+                  <strong>Global Game Jam Salta – Hub Vaqueros</strong> es tu
+                  lugar.
+                </p>
+                <p class="sobre-text">
+                  Estamos para acompañarte, ayudarte y vivir juntos una
+                  experiencia única de creación colaborativa.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+      <footer class="footer-section">
+        <div class="container">
+          <div class="row gy-4 align-items-lg-center">
+            <div class="col-md-4 text-center text-md-start">
+              <div class="footer-brand">
+                <img
+                  src="./assets/logo/LOGO-GGJ26-HUBVAQUEROS-02-removebg-preview.png"
+                  alt="Salta Game Jam"
+                  class="footer-logo"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <h4 class="footer-title">Salta Game Jam</h4>
+              <p class="footer-text">
+                Comunidad creativa dedicada al desarrollo de videojuegos, el
+                aprendizaje colaborativo y la creación de experiencias
+                interactivas desde Salta para el mundo.
+              </p>
+            </div>
+
+            <div class="col-md-4 text-center text-md-end">
+              <h5 class="footer-subtitle">Comunidad</h5>
+              <p class="footer-text">
+                Parte de la red internacional de
+                <strong>Global Game Jam</strong>
+              </p>
+
+              <a
+                href="https://globalgamejam.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-link-external"
+              >
+                globalgamejam.org
+              </a>
+
+              <div class="footer-social mt-3">
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="YouTube">YouTube</a>
+              </div>
+            </div>
+          </div>
+
+          <hr class="footer-divider" />
+
+          <div class="footer-bottom text-center">
+            <p>© 2026 - Global Game Jam Salta – Hub Vaqueros</p>
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

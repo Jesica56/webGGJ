@@ -1,4 +1,12 @@
-/* Navbar base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b0b16;
+  color: #ffffff;
+}
+
 .custom-navbar {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 0.75rem 0;
@@ -15,6 +23,15 @@
 /* Logo */
 .logo-navbar {
   height: 36px;
+}
+
+/* Texto marca */
+.brand-text {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
 }
 
 /* Links */
@@ -45,34 +62,12 @@
 .nav-links .nav-link:hover::after {
   width: 100%;
 }
-.brand-text {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 1rem;
-  margin-left: 0.5rem;
-  white-space: nowrap;
-  letter-spacing: 0.5px;
-}
-
-/* Ocultar texto en mobile chico */
-@media (max-width: 576px) {
-  .brand-text {
-    display: none;
-  }
-}
-
-
-/* Scroll suave */
-html {
-  scroll-behavior: smooth;
-}
-
-
+/*hero section*/
 .hero-section {
   min-height: 100vh;
+  padding-top: 80px; /* altura navbar */
   background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
   color: #ffffff;
-  padding-top: 80px; /* altura navbar */
 }
 
 .hero-title {
@@ -97,11 +92,7 @@ html {
   font-weight: 500;
 }
 
-.hero-video iframe {
-  border-radius: 12px;
-}
-
-
+/* Imagen evento */
 .event-image-wrapper {
   display: inline-block;
   border-radius: 16px;
@@ -121,12 +112,6 @@ html {
   transform: scale(1.03);
 }
 
-/*seccion de talleres */
-.talleres-section {
-  padding: 80px 0;
-  background-color: #0f0f1a;
-  color: #ffffff;
-}
 
 .section-title {
   font-size: 2.2rem;
@@ -139,7 +124,21 @@ html {
   opacity: 0.85;
 }
 
-/* Card */
+.section-subtitle {
+  color: #a5a5ff;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+
+/* Talleres */
+
+.talleres-section {
+  padding: 80px 0;
+  background-color: #0f0f1a;
+  color: #eaeaf0;
+}
+
 .taller-card {
   background-color: #151528;
   border-radius: 16px;
@@ -147,7 +146,6 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -156,30 +154,26 @@ html {
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
 }
 
-/* Títulos */
 .taller-title {
   font-size: 1rem;
   font-weight: 600;
   margin-top: 12px;
-  min-height: 48px; /* asegura mismo alto */
+  min-height: 48px; /* iguala alturas */
 }
 
-/* Meta */
 .taller-meta {
   font-size: 0.85rem;
   color: #7c4dff;
-  margin-top: auto; /* empuja al fondo */
-}
-.taller-description {
-  font-size: 0.9rem;
-  margin-top: 8px;
-  flex-grow: 1; /* ocupa espacio disponible */
+  margin-top: auto;
 }
 
-/*Galeria de imagenes */
+
+/*GALERÍA*/
+
 .galeria-section {
   padding: 80px 0;
   background-color: #0b0b16;
+  color: #eaeaf0;
 }
 
 .galeria-img {
@@ -193,5 +187,163 @@ html {
 
 .galeria-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 30px rgba(252, 249, 249, 0.6);
+}
+
+
+/* SOBRE NOSOTROS*/
+
+.sobre-section {
+  padding: 100px 0;
+  background-color: #0b0b16;
+  color: #eaeaf0;
+}
+
+.sobre-title {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.sobre-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #d1d1e0;
+}
+
+.sobre-text strong {
+  color: #ffffff;
+}
+
+.sobre-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.sobre-list li {
+  margin-bottom: 8px;
+}
+
+.sobre-list.multi {
+  columns: 2;
+}
+
+.sobre-text.destacado {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+
+
+@media (max-width: 576px) {
+  .brand-text {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+}
+
+/* footer*/
+
+.footer-section {
+  background: linear-gradient(180deg, #0b0b16 0%, #070711 100%);
+  padding: 80px 0 30px;
+  color: #d1d1e0;
+}
+
+
+.footer-logo {
+  max-width: 200px; /* antes 140px */
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.7));
+}
+
+.footer-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .footer-brand {
+    justify-content: flex-start;
+  }
+}
+
+/* Textos */
+.footer-title {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.footer-subtitle {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cfcfe6;
+  margin-bottom: 10px;
+}
+
+/* Links */
+.footer-link-external {
+  color: #a5a5ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-link-external:hover {
+  text-decoration: underline;
+}
+
+/* Redes */
+.footer-social a {
+  color: #ffffff;
+  margin-left: 12px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.footer-social a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background-color: #a5a5ff;
+  transition: width 0.3s ease;
+}
+
+.footer-social a:hover::after {
+  width: 100%;
+}
+
+/* Divider */
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 40px 0 20px;
+}
+
+@media (min-width: 992px) {
+  .footer-logo {
+    max-width: 230px;
+  }
 }
