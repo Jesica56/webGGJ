@@ -63,54 +63,79 @@ body {
   width: 100%;
 }
 /*hero section*/
-.hero-section {
+.hero-event {
   min-height: 100vh;
-  padding-top: 80px; /* altura navbar */
-  background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
-  color: #ffffff;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("https://www.salta.gob.ar/public/images/noticias/98256-maniana-se-inaugurara-el-primer-centro-de-alto-rendimiento-de-robotica-en-salta.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  color: #fff;
+  padding: 80px 0;
 }
 
+/* Badge */
+.event-badge {
+  display: inline-block;
+  background: #ff3d00;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Títulos */
 .hero-title {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: #7c4dff;
-  margin-bottom: 1rem;
-}
-
-.hero-text {
-  font-size: 1.1rem;
+  font-weight: 400;
   opacity: 0.9;
-  margin-bottom: 2rem;
 }
 
-.hero-buttons .btn {
-  padding: 0.6rem 1.5rem;
-  font-weight: 500;
+/* Texto */
+.hero-text {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  max-width: 500px;
 }
 
-/* Imagen evento */
+/* Info Evento */
+.event-info {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.event-info li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+/* Imagen */
 .event-image-wrapper {
-  display: inline-block;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-  max-width: 420px;
-  margin: auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
 .event-image {
-  width: 100%;
+  width: 75%;
   height: auto;
-  transition: transform 0.4s ease;
+  object-fit: cover;
 }
 
-.event-image-wrapper:hover .event-image {
-  transform: scale(1.03);
-}
 
 
 .section-title {
