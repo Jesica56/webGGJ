@@ -65,7 +65,7 @@ section {
 .nav-links .nav-link {
   color: #ffffff;
   font-weight: 500;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   position: relative;
   transition: color 0.3s ease;
 }
