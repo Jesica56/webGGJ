@@ -1,3 +1,7 @@
+/* =========================
+   GLOBAL
+========================= */
+
 html {
   scroll-behavior: smooth;
 }
@@ -5,27 +9,34 @@ html {
 body {
   background-color: #0b0b16;
   color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
+
+section {
+  padding: 80px 0;
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 60px 0;
+  }
+}
+
+/* =========================
+   NAVBAR (ESTÁTICO)
+========================= */
 
 .custom-navbar {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 0.75rem 0;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  z-index: 1000;
-}
-
-/* Navbar al scrollear */
-.custom-navbar.scrolled {
   background-color: rgba(10, 10, 10, 0.95);
+  padding: 0.75rem 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Logo */
 .logo-navbar {
   height: 36px;
 }
 
-/* Texto marca */
 .brand-text {
   color: #ffffff;
   font-weight: 600;
@@ -34,7 +45,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Links */
 .nav-links .nav-link {
   color: #ffffff;
   font-weight: 500;
@@ -47,7 +57,6 @@ body {
   color: #7c4dff;
 }
 
-/* Línea animada */
 .nav-links .nav-link::after {
   content: "";
   position: absolute;
@@ -62,25 +71,29 @@ body {
 .nav-links .nav-link:hover::after {
   width: 100%;
 }
-/*hero section*/
+
+@media (max-width: 576px) {
+  .brand-text {
+    display: none;
+  }
+}
+
+/* =========================
+   HERO / HOME
+========================= */
+
 .hero-event {
   min-height: 100vh;
   background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.85)
-    ),
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
     url("https://www.salta.gob.ar/public/images/noticias/98256-maniana-se-inaugurara-el-primer-centro-de-alto-rendimiento-de-robotica-en-salta.jpg");
-
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
   color: #fff;
   padding: 80px 0;
 }
 
-/* Badge */
 .event-badge {
   display: inline-block;
   background: #ff3d00;
@@ -88,11 +101,10 @@ body {
   font-size: 0.85rem;
   padding: 6px 14px;
   border-radius: 50px;
-  text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
-/* Títulos */
 .hero-title {
   font-size: 3rem;
   font-weight: 800;
@@ -104,14 +116,12 @@ body {
   opacity: 0.9;
 }
 
-/* Texto */
 .hero-text {
   font-size: 1.05rem;
   opacity: 0.9;
   max-width: 500px;
 }
 
-/* Info Evento */
 .event-info {
   list-style: none;
   padding: 0;
@@ -123,20 +133,43 @@ body {
   font-size: 0.95rem;
 }
 
-/* Imagen */
 .event-image-wrapper {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  text-align: center;
 }
 
 .event-image {
-  width: 75%;
+  width: 100%;
+  max-width: 420px;
   height: auto;
   object-fit: cover;
 }
 
+@media (max-width: 768px) {
+  .hero-event {
+    text-align: center;
+    padding: 60px 0;
+  }
 
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin: 0 auto 20px;
+  }
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
 
 .section-title {
   font-size: 2.2rem;
@@ -155,11 +188,11 @@ body {
   margin-top: 10px;
 }
 
-
-/* Talleres */
+/* =========================
+   TALLERES
+========================= */
 
 .talleres-section {
-  padding: 80px 0;
   background-color: #0f0f1a;
   color: #eaeaf0;
 }
@@ -183,20 +216,29 @@ body {
   font-size: 1rem;
   font-weight: 600;
   margin-top: 12px;
-  min-height: 48px; /* iguala alturas */
+  min-height: 48px;
+  text-align: center;
 }
 
 .taller-meta {
   font-size: 0.85rem;
   color: #7c4dff;
   margin-top: auto;
+  text-align: center;
 }
 
+@media (max-width: 576px) {
+  .taller-title {
+    min-height: auto;
+    font-size: 0.95rem;
+  }
+}
 
-/*GALERÍA*/
+/* =========================
+   GALERÍA
+========================= */
 
 .galeria-section {
-  padding: 80px 0;
   background-color: #0b0b16;
   color: #eaeaf0;
 }
@@ -212,14 +254,14 @@ body {
 
 .galeria-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(252, 249, 249, 0.6);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
 }
 
-
-/* SOBRE NOSOTROS*/
+/* =========================
+   SOBRE
+========================= */
 
 .sobre-section {
-  padding: 80px 0;
   background-color: #0e0e0e;
   color: #eaeaea;
 }
@@ -243,7 +285,6 @@ body {
   margin-bottom: 15px;
 }
 
-
 .sobre-grid div {
   background: #1e1e1e;
   padding: 16px 18px;
@@ -253,6 +294,16 @@ body {
   font-weight: 500;
 }
 
+@media (max-width: 768px) {
+  .sobre-card {
+    padding: 24px 18px;
+  }
+
+  .sobre-grid div {
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+}
 
 .sobre-cta {
   background: linear-gradient(135deg, #6f00ff, #a855f7);
@@ -266,36 +317,14 @@ body {
   margin: 0 auto;
 }
 
-
-
-@media (max-width: 576px) {
-  .brand-text {
-    display: none;
-  }
-
-  .hero-title {
-    font-size: 2.3rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.3rem;
-  }
-}
-
-/* footer*/
+/* =========================
+   FOOTER
+========================= */
 
 .footer-section {
   background: linear-gradient(180deg, #0b0b16 0%, #070711 100%);
   padding: 80px 0 30px;
   color: #d1d1e0;
-}
-
-
-.footer-logo {
-  max-width: 200px; /* antes 140px */
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.7));
 }
 
 .footer-brand {
@@ -305,13 +334,19 @@ body {
   padding: 10px 0;
 }
 
+.footer-logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.7));
+}
+
 @media (min-width: 768px) {
   .footer-brand {
     justify-content: flex-start;
   }
 }
 
-/* Textos */
 .footer-title {
   color: #ffffff;
   font-size: 1.4rem;
@@ -328,10 +363,8 @@ body {
   font-size: 0.95rem;
   line-height: 1.6;
   color: #cfcfe6;
-  margin-bottom: 10px;
 }
 
-/* Links */
 .footer-link-external {
   color: #a5a5ff;
   text-decoration: none;
@@ -342,10 +375,9 @@ body {
   text-decoration: underline;
 }
 
-/* Redes */
 .footer-social a {
   color: #ffffff;
-  margin-left: 12px;
+  margin: 0 10px;
   font-size: 0.9rem;
   text-decoration: none;
   position: relative;
@@ -366,7 +398,6 @@ body {
   width: 100%;
 }
 
-/* Divider */
 .footer-divider {
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -378,3 +409,4 @@ body {
     max-width: 230px;
   }
 }
+
