@@ -53,7 +53,7 @@ section {
 /* Extra para pantallas muy chicas */
 @media (max-width: 576px) {
   .logo-navbar {
-    width: 50%;
+    width: 100%;
     height: auto;
   }
 
