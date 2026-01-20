@@ -182,9 +182,7 @@ section {
   }
 }
 
-/* =========================
-   SECTION TITLES
-========================= */
+
 
 .section-title {
   font-size: 2.2rem;
@@ -203,17 +201,15 @@ section {
   margin-top: 10px;
 }
 
-/* =========================
-   TALLERES
-========================= */
+
 
 .talleres-section {
-  background-color: #0f0f1a;
+  background-color: rgba(8, 2, 90, 0.863);
   color: #eaeaf0;
 }
 
 .taller-card {
-  background-color: #151528;
+  background-color: #151528c9;
   border-radius: 16px;
   padding: 12px;
   height: 100%;
@@ -249,9 +245,6 @@ section {
   }
 }
 
-/* =========================
-   GALERÍA
-========================= */
 
 .galeria-section {
   background-color: #0b0b16;
@@ -272,12 +265,10 @@ section {
   box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
 }
 
-/* =========================
-   SOBRE
-========================= */
+
 
 .sobre-section {
-  background-color: #0e0e0e;
+  background-color:  rgba(8, 2, 90, 0.863);
   color: #eaeaea;
 }
 
@@ -321,7 +312,7 @@ section {
 }
 
 .sobre-cta {
-  background: linear-gradient(135deg, #6f00ff, #a855f7);
+  background: linear-gradient(105deg, rgba(226, 100, 220, 0.911), #a088ccb7);
   padding: 50px 30px;
   border-radius: 20px;
   color: #fff;
@@ -332,9 +323,7 @@ section {
   margin: 0 auto;
 }
 
-/* =========================
-   FOOTER
-========================= */
+
 
 .footer-section {
   background: linear-gradient(180deg, #0b0b16 0%, #070711 100%);
