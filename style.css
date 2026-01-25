@@ -373,7 +373,7 @@ section {
   color: #fff;
 }
 
-
+/* ===== CARD GGJ NEXT ===== */
 .ggjnext-card {
   background: linear-gradient(180deg, #828283, #39394b);
   border-radius: 20px;
@@ -383,8 +383,10 @@ section {
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  z-index: 1;
 }
 
+/* Efecto brillo (NO debe capturar clicks) */
 .ggjnext-card::before {
   content: "";
   position: absolute;
@@ -397,6 +399,11 @@ section {
   );
   opacity: 0;
   transition: opacity 0.35s ease;
+  pointer-events: none; /* 🔑 FIX CLAVE */
+}
+
+.ggjnext-card:hover::before {
+  opacity: 1;
 }
 
 .ggjnext-card:hover {
@@ -404,8 +411,7 @@ section {
   box-shadow: 0 30px 60px rgba(124, 77, 255, 0.35);
 }
 
-
-/* Badge */
+/* ===== BADGE ===== */
 .ggjnext-badge {
   display: inline-block;
   background: linear-gradient(135deg, #22c55e, #16a34a);
@@ -418,44 +424,20 @@ section {
   margin-bottom: 14px;
 }
 
-/* Título */
-.ggjnext-title {
+/* ===== TÍTULO ===== */
+.ggjnext-card h4 {
   font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  color: #fff;
 }
 
-/* Texto */
-.ggjnext-text {
-  font-size: 0.95rem;
-  opacity: 0.85;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-/* Link */
-.ggjnext-link {
-  color: #a5a5ff;
-  font-weight: 600;
-  text-decoration: none;
+/* ===== BOTÓN / LINK ===== */
+.ggjnext-card a {
   position: relative;
+  z-index: 5;
+  pointer-events: auto;
 }
-
-.ggjnext-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 2px;
-  background-color: #a5a5ff;
-  transition: width 0.3s ease;
-}
-
-.ggjnext-link:hover::after {
-  width: 100%;
-}
-
 .sobre-section {
   background-color:  rgba(8, 2, 90, 0.863);
   color: #eaeaea;

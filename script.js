@@ -12,6 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  document.addEventListener("click", e => {
+const link = e.target.closest("a");
+if (link && link.href.startsWith("http")) {
+return; // deja pasar
+}
+});
+
   /* ===== CAROUSEL ===== */
   const carousel = document.querySelector("#historicoCarousel");
   if (carousel) {
