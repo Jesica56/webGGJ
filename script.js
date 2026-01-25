@@ -10,11 +10,22 @@ navLinks.forEach(link => {
 });
 
 
-  const galeriaImgs = document.querySelectorAll('.galeria-img');
-  const modalImg = document.getElementById('galeriaModalImg');
+ const btn = document.getElementById("scrollTopBtn");
 
-  galeriaImgs.forEach(img => {
-    img.addEventListener('click', () => {
-      modalImg.src = img.dataset.img;
-    });
+btn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+
+
+const carousel = document.querySelector('#historicoCarousel');
+  new bootstrap.Carousel(carousel, {
+    interval: 4500,
+    ride: 'carousel'
   });

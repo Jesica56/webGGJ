@@ -19,18 +19,19 @@ section {
   }
 }
 
-
 .custom-navbar {
   background-color: rgba(10, 10, 10, 0.95);
   padding: 0.75rem 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
 }
 
+/* Logo */
 .logo-navbar {
   height: 46px;
 }
 
-/* Texto de marca */
+/* Texto marca */
 .brand-text {
   font-size: 1.1rem;
   font-weight: 600;
@@ -53,7 +54,7 @@ section {
 /* Extra para pantallas muy chicas */
 @media (max-width: 576px) {
   .logo-navbar {
-    height: 46px;
+    height: 36px;
   }
 
   .nav-links .nav-link {
@@ -70,11 +71,11 @@ section {
   transition: color 0.3s ease;
 }
 
-.nav-links .nav-link:hover {
+.navbar-nav .nav-link:hover {
   color: #7c4dff;
 }
 
-.nav-links .nav-link::after {
+.navbar-nav .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -85,14 +86,64 @@ section {
   transition: width 0.3s ease;
 }
 
-.nav-links .nav-link:hover::after {
+.navbar-nav .nav-link:hover::after {
   width: 100%;
 }
 
+/* =========================
+   BOTÓN HAMBURGUESA
+========================= */
 
+.navbar-toggler {
+  border: none;
+  padding: 6px 8px;
+}
 
-@media (max-width: 576px) {
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  filter: drop-shadow(0 0 4px rgba(124, 77, 255, 0.7));
+}
+
+/* =========================
+   SOLO CELULARES
+========================= */
+
+@media (max-width: 767px) {
+  /* Ocultamos el texto */
   .brand-text {
+    display: none;
+  }
+
+  /* Menú desplegable estilo gamer */
+  .navbar-collapse {
+    background: linear-gradient(180deg, #0f0f1a, #0b0b16);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  .navbar-nav {
+    gap: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background-color: #151528;
+    font-size: 0.95rem;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background-color: #7c4dff;
+    color: #ffffff;
+  }
+
+  .navbar-nav .nav-link::after {
     display: none;
   }
 }
@@ -100,7 +151,7 @@ section {
 .hero-event {
   min-height: 100vh;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+    linear-gradient( 105deg,rgba(22, 2, 77, 0.863), rgba(82, 80, 80, 0.411)),
     url("https://www.salta.gob.ar/public/images/noticias/98256-maniana-se-inaugurara-el-primer-centro-de-alto-rendimiento-de-robotica-en-salta.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -196,21 +247,20 @@ section {
 }
 
 .section-subtitle {
-  color: #a5a5ff;
-  font-size: 1.1rem;
+  color: #f5f2f8;
+  font-size: 1.5rem;
   margin-top: 10px;
 }
 
-
-
 .talleres-section {
-  background-color: rgba(8, 2, 90, 0.863);
-  color: #eaeaf0;
+  background-color: rgb(8, 2, 100);
+  color: #f5f3f3;
 }
 
 .taller-card {
-  background-color: #151528c9;
+  background-color: #f1f1f7c9;
   border-radius: 16px;
+  color: #070711;
   padding: 12px;
   height: 100%;
   display: flex;
@@ -233,7 +283,8 @@ section {
 
 .taller-meta {
   font-size: 0.85rem;
-  color: #7c4dff;
+  color: #08023d;
+  font-weight: 500;
   margin-top: auto;
   text-align: center;
 }
@@ -245,27 +296,171 @@ section {
   }
 }
 
-
-.galeria-section {
-  background-color: #0b0b16;
-  color: #eaeaf0;
+.historico-section {
+  background: rgb(1, 1, 44);
+  color: #d1d1e0;
 }
 
-.galeria-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.historico-card {
+  display: block;
+  background: #c3c3e7;
+  padding: 32px;
+  border-radius: 20px;
+  color: #04093a;
+  text-decoration: none;
+  height: 100%;
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 
-.galeria-img:hover {
+.historico-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(124, 77, 255, 0.35);
+}
+
+.historico-year {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2f0263;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.historico-card h5 {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.historico-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.historico-link {
+  margin-top: 12px;
+  display: inline-block;
+  color: #040453;
+  font-size: 0.9rem;
+}
+
+
+/* Destacar edición actual */
+.historico-card.highlight {
+  background: linear-gradient(105deg, rgba(226, 100, 220, 0.911), #a088ccb7);
+}
+/*.carousel-item {
+  transition: transform 0.8s ease-in-out;
+}*/
+
+
+/* Contenido interno */
+.historico-content {
+  padding-top: 20px;
+}
+
+/* Efecto hover suave */
+.historico-card:hover .historico-image img {
   transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
+}
+/* Controles más suaves */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: drop-shadow(0 0 6px #7c4dff);
 }
 
+.subsection-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
 
+.ggjnext-badge {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.ggjnext-card {
+  background: linear-gradient(180deg, #828283, #39394b);
+  border-radius: 20px;
+  padding: 28px 24px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.ggjnext-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(124, 77, 255, 0.15),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.ggjnext-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 30px 60px rgba(124, 77, 255, 0.35);
+}
+
+.ggjnext-card:hover::before {
+  opacity: 1;
+}
+
+/* Badge */
+.ggjnext-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 50px;
+  letter-spacing: 0.8px;
+  margin-bottom: 14px;
+}
+
+/* Título */
+.ggjnext-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Texto */
+.ggjnext-text {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Link */
+.ggjnext-link {
+  color: #a5a5ff;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+
+.ggjnext-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #a5a5ff;
+  transition: width 0.3s ease;
+}
+
+.ggjnext-link:hover::after {
+  width: 100%;
+}
 
 .sobre-section {
   background-color:  rgba(8, 2, 90, 0.863);
@@ -323,7 +518,143 @@ section {
   margin: 0 auto;
 }
 
+.organizacion-section {
+  margin-top: 80px;
+}
 
+.section-title-sm {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.section-subtitle-sm {
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+
+
+.org-card {
+  background: linear-gradient(180deg, #57555596, #1e1e1f80);
+  border-radius: 20px;
+  padding: 24px 16px;
+  color: #fff;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.org-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(124, 77, 255, 0.35);
+}
+
+.org-card img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.org-role {
+  display: block;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #1a1ae9;
+  margin-bottom: 10px;
+}
+.org-links{
+  background-color: #06068bbd;
+}
+.org-links a {
+  margin: 0 6px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* Organizador destacado */
+.org-card.highlight {
+  background: linear-gradient(135deg, #6f00ff, #a855f7);
+}
+
+.organizador-principal .org-card {
+  max-width: 260px;
+  margin: 0 auto;
+}
+.disertantes-section {
+  margin-top: 80px;
+}
+
+.speaker-card {
+  background: linear-gradient(180deg, #57555596, #1e1e1f80);
+  border-radius: 22px;
+  padding: 32px 20px;
+  height: 100%;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.speaker-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(124, 77, 255, 0.4);
+}
+
+.speaker-card img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  border: 3px solid #7c4dff;
+}
+
+.speaker-topic {
+  display: block;
+  font-size: 0.9rem;
+  color: #a5a5ff;
+  margin-bottom: 10px;
+}
+
+.speaker-desc {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 14px;
+}
+.org-card.institutional {
+  background: linear-gradient(180deg, #57555596, #1e1e1f80);
+  border-radius: 20px;
+  padding: 28px 20px;
+  height: 100%;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.org-card.institutional:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(124, 77, 255, 0.25);
+}
+
+
+.org-role {
+  display: block;
+  font-size: 0.85rem;
+  color: #a5a5ff;
+  margin-bottom: 6px;
+}
+
+.org-location {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+.org-map {
+  margin-top: 12px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.org-map iframe {
+  width: 100%;
+  height: 160px;
+  border: 0;
+}
 
 .footer-section {
   background: linear-gradient(180deg, #0b0b16 0%, #070711 100%);
@@ -414,3 +745,21 @@ section {
   }
 }
 
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #7c4dff;
+  color: #fff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: none;
+  z-index: 999;
+}
+#scrollTopBtn:hover {
+  background: #5a32cc;
+  cursor: pointer;
+}
