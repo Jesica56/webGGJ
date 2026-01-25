@@ -1,31 +1,39 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ===== NAVBAR ===== */
   const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-const navbarCollapse = document.querySelector(".navbar-collapse");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
 
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    if (navbarCollapse.classList.contains("show")) {
-      new bootstrap.Collapse(navbarCollapse).hide();
-    }
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (navbarCollapse.classList.contains("show")) {
+        new bootstrap.Collapse(navbarCollapse).hide();
+      }
+    });
   });
-});
 
+  /* ===== CAROUSEL ===== */
+  const carousel = document.querySelector("#historicoCarousel");
+  if (carousel) {
+    new bootstrap.Carousel(carousel, {
+      interval: 4500,
+      ride: "carousel"
+    });
+  }
 
- const btn = document.getElementById("scrollTopBtn");
+  /* ===== BOTÓN IR ARRIBA ===== */
+  const btnArriba = document.getElementById("btn-arriba");
 
-btn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
+  if (btnArriba) {
+    window.addEventListener("scroll", () => {
+      btnArriba.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    btnArriba.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
   }
 });
-
-
-const carousel = document.querySelector('#historicoCarousel');
-  new bootstrap.Carousel(carousel, {
-    interval: 4500,
-    ride: 'carousel'
-  });

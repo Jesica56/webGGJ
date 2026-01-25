@@ -373,9 +373,6 @@ section {
   color: #fff;
 }
 
-.ggjnext-badge {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-}
 
 .ggjnext-card {
   background: linear-gradient(180deg, #828283, #39394b);
@@ -407,9 +404,6 @@ section {
   box-shadow: 0 30px 60px rgba(124, 77, 255, 0.35);
 }
 
-.ggjnext-card:hover::before {
-  opacity: 1;
-}
 
 /* Badge */
 .ggjnext-badge {
@@ -745,21 +739,22 @@ section {
   }
 }
 
-#scrollTopBtn {
+#btn-arriba {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: #7c4dff;
-  color: #fff;
+  background-color: #0d6efd;
+  color: white;
   border: none;
-  width: 48px;
-  height: 48px;
   border-radius: 50%;
-  font-size: 20px;
-  display: none;
-  z-index: 999;
-}
-#scrollTopBtn:hover {
-  background: #5a32cc;
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
   cursor: pointer;
+  display: none;
+  z-index: 9999;
+}
+
+#btn-arriba:hover {
+  background-color: #084298;
 }
