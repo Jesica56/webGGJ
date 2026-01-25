@@ -71,7 +71,7 @@
       <section id="home" class="hero-event d-flex align-items-center">
         <div class="container">
           <div class="row align-items-center gy-4">
-            <!-- Info Evento -->
+            <!-- INFO EVENTO (NO SE TOCA) -->
             <div class="col-lg-5 text-center text-lg-start">
               <span class="event-badge">Evento actual</span>
 
@@ -91,22 +91,94 @@
               </ul>
 
               <div class="hero-buttons mt-4">
-                <a href="#talleres" class="btn btn-primary me-2">
-                  Ver talleres
-                </a>
-                <a href="#historico" class="btn btn-outline-light">
-                  Ver ediciones pasadas
-                </a>
+                <a href="#talleres" class="btn btn-primary me-2"
+                  >Ver talleres</a
+                >
+                <a href="#historico" class="btn btn-outline-light"
+                  >Ver ediciones pasadas</a
+                >
               </div>
             </div>
 
+            <!-- CARRUSEL EVENTO + CRONOGRAMA -->
             <div class="col-lg-7 text-center">
-              <div class="event-image-wrapper">
-                <img
-                  src="./assets/eventos/PEGATINA.png"
-                  alt="Global Game Jam 2026 - Hub Vaqueros"
-                  class="img-fluid event-image"
-                />
+              <div
+                id="homeCarousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <!-- SLIDE 1: IMAGEN EVENTO -->
+                  <div class="carousel-item active">
+                    <div class="event-image-wrapper">
+                      <img
+                        src="./assets/eventos/PEGATINA.png"
+                        alt="Global Game Jam 2026 - Hub Vaqueros"
+                        class="img-fluid event-image"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- SLIDE 2 -->
+                  <div class="carousel-item">
+                    <div class="cronograma-card">
+                      <span class="cronograma-dia">Lunes 26 y Martes 27</span>
+                      <h3>Talleres PreJAM</h3>
+                      <p><strong>Horario:</strong> 15 a 20 hs</p>
+                      <p><strong>Lugar:</strong> HUB Tecnológico Vaqueros</p>
+                    </div>
+                  </div>
+
+                  <!-- SLIDE 3 -->
+                  <div class="carousel-item">
+                    <div class="cronograma-card">
+                      <span class="cronograma-dia">Jueves 29</span>
+                      <h3>Alta y armado de equipos</h3>
+                      <p>Registro en la plataforma Global Game Jam</p>
+                      <p>Ayuda para presentación de proyectos</p>
+                      <p><strong>Horario:</strong> 15 a 20 hs</p>
+                    </div>
+                  </div>
+
+                  <!-- SLIDE 4 -->
+                  <div class="carousel-item">
+                    <div class="cronograma-card">
+                      <span class="cronograma-dia">Viernes 30</span>
+                      <h3>Competencia Global Game Jam</h3>
+                      <p><strong>Desarrollo:</strong> 10 a 20 hs</p>
+                      <p><strong>Inauguración oficial:</strong> 17 hs</p>
+                    </div>
+                  </div>
+
+                  <!-- SLIDE 5 -->
+                  <div class="carousel-item">
+                    <div class="cronograma-card">
+                      <span class="cronograma-dia">Sábado 31</span>
+                      <h3>Cierre y presentaciones</h3>
+                      <p>Subida de proyectos a la plataforma GGJ</p>
+                      <p><strong>Presentación:</strong> 18 hs</p>
+                      <p><strong>Cierre presencial:</strong> 20 hs</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CONTROLES -->
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#homeCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#homeCarousel"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </button>
               </div>
             </div>
           </div>

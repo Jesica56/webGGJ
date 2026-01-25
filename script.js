@@ -19,6 +19,14 @@ return; // deja pasar
 }
 });
 
+const homeCarousel = document.querySelector("#homeCarousel");
+if (homeCarousel) {
+  new bootstrap.Carousel(homeCarousel, {
+    interval: 6500,
+    pause: "hover",
+    ride: "carousel"
+  });
+}
   /* ===== CAROUSEL ===== */
   const carousel = document.querySelector("#historicoCarousel");
   if (carousel) {
